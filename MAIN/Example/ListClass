@@ -1,0 +1,21 @@
+public class ListClass : MonoBehaviour
+{
+   public GameObject previousLink;
+   public GameObject nextLink;
+} //定义两gameobject
+
+  if(Input.GetKeyDown(KeyCode.LeftArrow)) 
+  {
+      currentLink.transform.localScale = new Vector3(1, 1, 0);
+      currentLink = currentLink.GetComponent<ListClass>().previousLink;
+      currentLink.transform.localScale = new Vector3(1.4f, 1.4f, 0);
+  }
+
+  if (Input.GetKeyDown(KeyCode.RightArrow))
+  {
+      currentLink.transform.localScale = new Vector3(1, 1, 0);
+      currentLink = currentLink.GetComponent<ListClass>().nextLink;
+    ///不停跟新变换currentLink
+      currentLink.transform.localScale = new Vector3(1.4f, 1.4f, 0);
+
+  }

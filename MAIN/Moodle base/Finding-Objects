@@ -1,0 +1,8 @@
+public GameObject refToApple;
+void Start()
+{
+  refToApple = GameObject.Find("Apple");
+  Mouse = GameObject.Find("Mouse");
+}
+
+//寻找命名物体

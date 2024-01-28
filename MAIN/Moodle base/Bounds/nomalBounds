@@ -1,0 +1,33 @@
+public GameObject firstObject,secoundObject;
+public SpriteRenderer firstSR,secoundSR;
+
+void Start()
+{
+  firstSR = firstObject.GetComponent<SpriteRenderer>();
+  secoundSR = secoundObject.GetComponent<SpriteRenderer>();
+}
+
+ void Update()
+ {
+   if(firstSR.bounds.Intersects(secoundSR.bounds))
+   {
+    print("Both objects collided");
+   }
+   
+ }
+ //检查两个物体是否碰撞
+
+ or
+
+
+ void Update()
+ {
+   firstBounds = firstSR.bounds;
+   secoundBounds = secoundSR.bounds;
+   if(firstSR.bounds.Intersects(secoundBounds))
+   {
+    print("Both objects collided");
+   }
+   
+ }
+ //更简化碰撞

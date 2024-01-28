@@ -1,0 +1,33 @@
+if (this.transform.position.x < -4.5f)
+{
+    this.transform.position = new Vector3(-4.5f, this.transform.position.y, this.transform.position.z);
+}
+
+if (this.transform.position.x > 4.5f)
+{
+    this.transform.position = new Vector3(4.5f, this.transform.position.y, this.transform.position.z);
+}
+//只改变x的方向，其他方向保留
+
+
+
+this.transform.position = new Vector3(xPosition,yPosition);
+if (this.transform.position.x<-8.5f) xPosition = -8.5f;
+if (this.transform.position.x>8.5f) xPosition = 8.5f;
+if (this.transform.position.x>5) xPosition = 5;
+if (this.transform.position.x<-5) xPosition = -5;
+//方形移动范围
+
+
+
+float randomFloat = Random.Range(0f,1.5f);
+[Range(-8.5f,8.5f)]
+public float xPosition; //限制X行的位置
+[Range(-5f,5f)]
+public float yPosition;//限制Y行的位置
+void Update()
+{
+  this.transform.position = new Vector3(xPosition,yPosition)
+}
+//在范围内移动
+

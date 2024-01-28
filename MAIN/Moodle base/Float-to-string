@@ -1,0 +1,4 @@
+print(myFloat.ToString("F0")); //保留整数
+print(myFloat.ToString("F7")); //保留到7位小数
+timerMesh.text = frameCount.ToString("F2") + "seconds"; 
+///frameCount是一个float 转换为string

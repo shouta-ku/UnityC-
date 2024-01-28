@@ -1,0 +1,63 @@
+viod Update()
+{
+  if(myString.Contains("Test")) //Contain包含
+  {
+    print("There is a 'Test' in the string");
+  }
+    if(myString.EndWish("g")) //EndWish结尾
+  {
+    print("The string ends with letter 'g' ");
+  }
+      if(myString.StartsWith("T"))//StartsWith开始于
+  {
+    print("The string starts with capitalised letter 'T' ");
+  }
+ if (myString == " ")
+{
+    myString = myString.Replace(" ", "Test"); // 将空格替换为 "Test"
+  ///string Replace(string oldValue, string newValue);
+    print("The is just a space for Test");
+    print(myString); // 打印替换后的字符串
+}
+}
+
+
+
+
+//Insert:字符串的特定位置插入一个字符串：
+originalString = "Hello, world!";
+string insertedString = originalString.Insert(5, " beautiful");
+//string Insert(int startIndex, string value//需要输入的string);
+// insertedString 的值现在是 "Hello beautiful, world!"
+
+
+
+
+
+//Remove:方法用于从字符串中删除特定索引位置开始的一定数量的字符
+string originalString = "Hello, world!";
+string modifiedString = originalString.Remove(5, 9);
+// modifiedString 的值现在是 "Hello!"
+//string Remove(int startIndex, int count);//删除从5-9
+
+
+
+
+
+//Substring:方法用于从字符串中提取指定位置开始的一段子字符串：
+string originalString = "Hello, world!";
+string subString1 = originalString.Substring(0, 5);
+// subString1 的值现在是 "Hello"
+string subString2 = originalString.Substring(7);
+// subString2 的值现在是 "world!"
+//string Substring(int startIndex);
+//string Substring(int startIndex, int length);
+
+
+
+
+
+
+Length:属性返回字符串中字符的数量
+string text = "Hello, world!";
+int length = text.Length; // length 的值现在是 13

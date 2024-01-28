@@ -1,0 +1,17 @@
+public TextMesh reToText;
+void Update()
+{
+  refToText.text = "This is my text"+timer;
+}
+//创建文本框
+
+
+
+using UnityEngine;
+
+public class MyScript : MonoBehaviour
+{
+    [TextArea(3, 10)] // 3 行高度，10 行宽度
+    public string description = "This is a multi-line text field in the Inspector.";
+}
+//设置滚动文本框

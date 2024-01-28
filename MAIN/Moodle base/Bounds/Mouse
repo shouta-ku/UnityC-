@@ -1,0 +1,21 @@
+if(Input.GetKeyDown(KeyCode.Mouse0))   print("LMB clicked")
+/* 
+获取鼠标的屏幕坐标位置
+if Vector3 mousePosition = Input.mousePosition;
+
+// 使用 Camera.main.ScreenToWorldPoint 将屏幕坐标转换为世界坐标
+Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 10f));
+
+// 将计算得到的世界坐标设置为当前对象的位置
+this.transform.position = worldPosition;
+*/
+
+
+     mouse.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition)+new Vector3(0,0,10);
+     if (Input.GetMouseButtonDown(0))
+     {
+         if(mouseSR.bounds.Intersects(firstSR.bounds)) 
+         {
+             coilld=true;
+         }
+     }

@@ -1,0 +1,5 @@
+ redSquare.transform.localScale += new Vector3(Random.Range(0,0.05f), 0f, 0f);
+ greenSquare.transform.localScale += new Vector3(Random.Range(0, 0.05f), 0f, 0f);
+ Square.transform.localScale = new Vector3(1, 1, 0);
+  greenSquare.transform.localScale = new Vector3(2f, greenSquare.localScale.y, greenSquare.localScale.z);
+//用于其中X轴的值设置为 2f，Y轴的值设置为 greenSquare 的当前Y轴局部缩放值（保持不变），Z轴的值设置为 greenSquare 的当前Z轴局部缩放值（保持不变）

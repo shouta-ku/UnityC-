@@ -1,0 +1,18 @@
+if (Input.GetKey(KeyCode.RightArrow)&&this.transform.position.x<8.5f)
+{
+  this.transfrom.position+= new Vector(0.1f,0,0);
+}
+//在范围内移动
+
+
+ reftext.transform.position = red.transform.position;
+// 让两个物件一起移动
+
+
+ Vector3 offset3 = new Vector3(-0.2f, 0, -1);
+ Vector3 offset2 = new Vector3(0, 0, -1);
+ Vector3 offset1 = new Vector3(0.2f, 0, -1);
+ refToLife3.transform.position = this.transform.position + offset3;
+ refToLife2.transform.position = this.transform.position + offset2;
+ refToLife1.transform.position = this.transform.position + offset1;
+//让两个物件一起移动/但是非相同坐标

@@ -1,0 +1,5 @@
+if (Input.GetKey(KeyCode.RightArrow)&&this.transform.position.x>8.5f)
+{
+  this.transform.position-= new Vector3(17f,0,0);
+}
+//出范围炒股现到另一边
