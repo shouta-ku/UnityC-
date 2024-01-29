@@ -1,0 +1,106 @@
+//（Linear interpolation)线性插值
+//（B-A）*T
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Vector3.Lerp:
+//用于在两个Vector3对象之间插值，常用于平滑移动或改变游戏对象的位置。
+Vector3.Lerp(startPosition, endPosition, time)
+
+
+
+public Transform objectToMove; // 游戏对象的Transform
+public Vector3 startPosition; // 起始位置 A
+public Vector3 endPosition; // 结束位置 B
+public float duration = 2f; // 从起始位置到结束位置的持续时间
+private float currentTime = 0f;
+
+void Update() {
+    if (currentTime < duration) {
+        currentTime += Time.deltaTime;
+        float t = currentTime / duration; // 计算插值参数 T
+        objectToMove.position = (endPosition - startPosition) * t + startPosition; // 应用插值公式
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Quaternion.Lerp:
+//用于在两个Quaternion对象之间插值，常用于平滑旋转游戏对象。
+Quaternion.Lerp(startRotation, endRotation, time)
+
+
+//Color.Lerp:
+//用于在两个Color对象之间插值，常用于颜色过渡。
+Color.Lerp(startColor, endColor, time)
+public Renderer objectRenderer; // 游戏对象的Renderer
+public Color startColor; // 起始颜色 A
+public Color endColor; // 结束颜色 B
+public float duration = 2f; // 颜色变化的持续时间
+
+private float currentTime = 0f;
+
+void Update() {
+    if (currentTime < duration) {
+        currentTime += Time.deltaTime;
+        float t = currentTime / duration; // 计算插值参数 T
+        objectRenderer.material.color = Color.Lerp(startColor, endColor, t); // 应用插值公式
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Mathf.Lerp:
+//用于在两个浮点数之间插值，可以应用于各种数值的平滑过渡。
+Mathf.Lerp(startValue, endValue, time)
+public float startValue = 0f; // 起始数值 A
+public float endValue = 100f; // 结束数值 B
+public float duration = 2f; // 数值变化的持续时间
+
+private float currentTime = 0f;
+private float currentValue;
+
+void Update() {
+    if (currentTime < duration) {
+        currentTime += Time.deltaTime;
+        float t = currentTime / duration; // 计算插值参数 T
+        currentValue = (endValue - startValue) * t + startValue; // 应用插值公式
+        Debug.Log(currentValue);
+    }
+}

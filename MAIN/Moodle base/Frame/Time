@@ -2,4 +2,5 @@ void Update()
 {
   this.transform.position += new Vector3(1*Time.deltaTime,0,0);
 }
-//
+//Time.deltaTime 两帧之间的时间差
+//作用：确保游戏的行为（如移动、旋转等）不会因帧率的变化而变得不一致
